@@ -1,0 +1,460 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: var(--fFamily);
+}
+:root{
+    --red:#dd1c1a;
+    --dark:#011627;
+    --yellow:#f0c808;
+    --light:#f6f6f6;
+    --lBlue:#bfcde0;
+    --yellowL:#e5bf07;
+    --redL:#c90f0d;
+    --blue:#6cabff;
+    --blueL:#3174de;
+    --fFamily:'Roboto', sans-serif;
+    --darkShadowSm: 4px 4px 15px rgba(211, 211,211, 0.158);
+    --darkShadowLg: 2px 2px 10px rgba(211, 211, 211, 0.5);
+
+}
+body{
+    background-color: var(--dark);
+    color: var(--light);
+    overflow-x: hidden;
+    transition: all 400ms ease-in-out;
+}
+body a{
+    color: var(--light);
+    text-decoration: none;
+
+}
+body ul{
+    list-style-type: none;
+}
+.title{
+    font-size: 42px;
+    color: var(--blue);
+    font-weight: 800;
+}
+.space{
+    width: 100%;
+    height: 20vh;
+}
+.section{
+    width: 100%;
+    margin-left: 12vh;
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+
+}
+/* Illustration SVG CSS */
+.illus{
+    position: absolute;
+    right: 0;
+    width: 300px;
+    /* top: 50px; */
+}
+/* Navbar CSS */
+.navbar{
+    position: fixed;
+    width: 10vh;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    box-shadow: var(--darkShadowLg);
+    background-color: var(--dark);
+    z-index: 99;
+}
+.navbar .logo{
+    position: absolute;
+    top: 100px;
+    transition: all 200ms ease-in-out;
+
+}
+.navbar .logo:hover{
+    transform: scale(1.1);
+
+}
+.navbar .logo img{
+    width: 40px;
+}
+.navbar .navTheme{
+    position: absolute;
+    bottom: 50px;
+    cursor: pointer;
+}
+.navbar .navTheme:hover{
+    transform: scale(1.1);
+    color: var(--yellow);
+}
+
+.navbar .navLinks ul{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.navbar .navLinks .navLink{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms ease-in-out;
+}
+.navbar .navLinks .navLink:hover{
+    color: var(--yellow);
+}
+.navbar .navLinks .navLink .material-icons{
+    font-size: 36px;
+    padding-bottom: 4px;
+}
+.navbar .navLinks .navLink .navText{
+    font-size: 14px;
+}
+/* Theme buttion CSS */
+.theme{
+    display: none;
+}
+/* Hero CSS */
+.hero{
+    width: 90%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero .heroImg img{
+    width: 250px;
+    clip-path: circle(50%);
+    /* border-radius: 50%; */
+    margin-bottom: 50px;
+    /* border:3px solid var(--yellow); */
+}
+.hero .heroTitle{
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px ;
+}
+.hero .heroBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.hero .heroBtn .btn{
+    width: 200px;
+    text-align: center;
+    padding: 15px;
+    background-color: var(--yellow);
+    color: var(--dark);
+    margin: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 3%;
+    transition: all 200ms ease-in-out;
+
+}
+.hero .heroBtn .btnSec{
+    width: 200px;
+    text-align: center;
+    padding: 15px;
+    border: 3.5px solid var(--yellow);
+    background-color: var(--light);
+    color: var(--dark);
+    margin: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 3%;
+    transition: all 200ms ease-in-out;
+
+}
+.hero .heroBtn .btn:hover{
+    transform: scale(1.07);
+}
+.hero .heroBtn .btnSec:hover{
+    background-color: var(--yellow);
+    color: var(--dark);
+    transform: scale(1.07);
+}
+
+/* Aboout Section CSS */
+
+
+.about .aboutContent{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    width: 80%;
+    text-align: justify;
+    line-height: 40px;
+    padding-bottom: 30px;
+}
+
+.about .abtBtn{
+    width: 200px;
+    text-align: center;
+    margin: 10px;
+    padding: 15px;
+    border: 3.5px solid var(--yellow);
+    background-color: var(--light);
+    color: var(--dark);
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 3%;
+    transition: all 200ms ease-in-out;
+}
+.about .abtBtn:hover{
+    background-color: var(--yellow);
+    transform: scale(1.07);
+}
+
+
+/* Skills CSS */
+.skills .cardRow{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 20px;  
+}
+.skills .cardRow .card{
+    width: 250px;
+    height: 250px;
+    box-shadow: var(--darkShadowLg);
+    margin: 50px 50px 10px 10px;
+    padding: 50px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow:hidden;
+    cursor: pointer;
+    text-align: center;
+}
+.skills .cardRow .card .cardIcon .material-icons{
+    font-size: 64px;
+    color: var(--yellow);
+}
+.skills .cardRow .card .cardTitle{
+font-size: 30px;
+}
+.skills .cardRow .card .cardContentLg{
+    position: absolute;
+    background-color: var(--yellow);
+    color: var(--dark);
+    width: 100%;
+    height: 100%;
+    padding: 35px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    transform: translateY(100%);
+    transition: all 400ms ease-in-out;
+}
+.skills .cardRow .card:hover .cardContentLg{
+    transform: translateY(0%);
+}
+.skills .cardRow .card .cardContentSm{
+    display: none;
+}
+
+/* Projects CSS */
+.projects .cardRow .card img{
+    width: 100%;
+    box-shadow: var(--darkShadowLg);
+    border-radius: 8px;
+    transition: all 200ms ease-in-out;
+}
+.projects .cardRow{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-left: -15px;
+}
+.projects .cardRow .card{
+    width: 75%;
+    margin: 10px;
+}
+.projects .cardRow .card:hover img{
+    transform: scale(1.02);
+    box-shadow: 2px 2px #ffffff2c;
+}
+
+/* Contact CSS */
+.contact .iconRow{
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.contact .iconRow .icon{
+    margin:10px;
+    font-size: 54px;
+    padding-right: 40px;
+    transition: all 200ms ease-in-out;
+}
+.contact .iconRow .icon:hover{
+    color: var(--yellow);
+    transform: translateY(-10%);
+}
+
+
+
+
+
+
+
+@media screen and (max-width:760px) {
+    /* Global css */
+    .title{
+        font-size: 36px;
+    }
+    .space{
+        width: 100%;
+        height: 10vh;
+    }
+    .section{
+        margin: 0;
+        width: 100%;
+        padding: 50px 30px;
+
+    }
+    /* Illustratin SVG CSS */
+    .illus{
+        position: absolute;
+        right: 0;
+        width: 300px;
+        /* top: 50px; */
+    }
+    /* Navbar CSS */
+    .navbar{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 10vh;
+        box-shadow: var(--darkShadowSm);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+    .navbar .logo,.navbar .navTheme{
+        display: none;
+
+    }
+    .navbar .navLinks{
+        width: 100%;
+    }
+    .navbar .navLinks ul{
+        height: 10vh;
+        width: 100%;
+        padding: 0 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .navbar .navLinks .navLink .navText{
+        font-size: 12px;
+    }
+    /* Theme buttion CSS */
+    .theme{
+        display: block;
+        position: absolute;
+        top: 30px;
+        left: 50px;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+    }
+    .theme:hover{
+        color: var(--yellow);
+        transform: scale(1.1);
+    }
+    /* Hero CSS */
+    .hero .heroImg img{
+        width: 200px;
+        margin-bottom: 20px;
+
+    }
+    .hero .heroTitle{
+        font-size: 28px;
+    }
+    .hero .heroBtn{
+        flex-direction: column;
+    }
+
+
+    /* About Section CSS */
+    
+    .about .aboutContent{
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 25px;
+        padding: 0;
+    }
+    /* Skills CSS */
+    .skills .cardRow{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .skills .cardRow .card{
+        width: 180px;
+        height: 180px;
+        padding: 25px;
+        align-items: flex-start;
+        overflow: visible;
+    }
+    .skills .cardRow .card .cardIcon .material-icons{
+        font-size: 42px;
+        
+    }
+    .skills .cardRow .card .cardTitle{
+        font-size: 20px;
+    }
+    .skills .cardRow .card .cardContentLg{
+        display: none;
+    }
+    .skills .cardRow .card .cardContentSm{
+        display: block;
+        position: absolute;
+        left: 85%;
+        width: 100%;
+        height: 95%;
+        background-color: var(--yellow);
+        border-radius: 8px;
+        padding: 15px;
+        color: var(--dark);
+        font-size: 16px;
+        font-weight: 500;
+        
+    }
+    /* Projects CSS */
+    .projects .cardRow{
+        flex-direction: column;
+    
+    }
+    .projects .cardRow .card{
+        width: 90%;
+    }
+    /* Contact CSS */
+    .contact .iconRow .icon{
+        font-size: 32px;
+        padding-right: 20px;
+    }
+}
