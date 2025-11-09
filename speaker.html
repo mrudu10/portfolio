@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Public Speaker | Mrudu Lahari</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- <script src="https://kit.fontawesome.com/a2b6b12345.js" crossorigin="anonymous"></script> -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.querySelector(".slider-container");
+    let scrollAmount = 0;
+
+    function autoScroll() {
+      if (!slider) return;
+      scrollAmount += slider.clientWidth / 3;
+      if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
+        scrollAmount = 0;
+      }
+      slider.scrollTo({ left: scrollAmount, behavior: "smooth" });
+    }
+
+    let slideTimer = setInterval(autoScroll, 3000);
+
+    // Pause on hover
+    slider.addEventListener("mouseenter", () => clearInterval(slideTimer));
+    slider.addEventListener("mouseleave", () => {
+      slideTimer = setInterval(autoScroll, 3000);
+    });
+  });
+</script>
+
+</head>
+
+<body>
+
+  <!-- ================== HEADER ================== -->
+  <header class="header">
+    <div class="brand">
+      <img src="logo.png" alt="Logo" class="header-logo">
+      <span class="brand-name">Mrudu Lahari</span>
+    </div>
+
+    <div class="sub-header">
+      <nav class="nav">
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="index.html#about-home">About Me</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="awards.html">Achievements</a></li>
+          <li><a href="projects.html">Projects</a></li>          
+          <li><a href="Connect.html">Let's Talk</a></li>  
+          <li><a href="speaker.html">Public Speaker</a></li>          
+        </ul>
+      </nav>
+      <div class="social-icons">
+  <a href="https://www.linkedin.com/in/mrudulaharim/" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  <a href="https://github.com/mrudu10" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="https://medium.com/@malayanurmrudu" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-medium"></i>
+  </a>
+</div>
+    </div>
+  </header>
+<!-- ================== HERO QUOTE SECTION ================== -->
+<section class="hero-quote">
+  <div class="quote-content">
+    <h1>“Stories connect hearts before they change minds.”</h1>
+    <!-- <p>– Mrudu Lahari</p> -->
+  </div>
+</section>
+
+
+<!-- ================== TESTIMONIALS SLIDER ================== -->
+<section class="testimonials-slider">
+  <h2>What People Say</h2>
+  <div class="slider-container">
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>“Mrudu shared super helpful tips for preparing for GHC Conference — her guidance boosted my confidence immensely.”</p>
+      <span>— Shubhi Gupta · 17 Oct 2025</span>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>“Talking to her felt like chatting with a friend. She’s incredibly knowledgeable and kind.”</p>
+      <span>— Rutika Bhor · 12 Oct 2025</span>
+    </div>
+      <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>“I had an amazing session with Mrudu! She introduced me to new tools and helped me gain clarity in my job search.”</p>
+      <span>— Anonymous · 31 Oct 2025</span>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>“Mrudu is warm and patiently answered all my questions. I wish her the best 🙂”</p>
+      <span>— Anonymous · 17 Oct 2025</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================== ABOUT SECTION ================== -->
+<section class="about-section">
+  <div class="about-container">
+    <h2>About Mrudu Lahari</h2>
+    <p>
+      As a <strong>public speaker and storyteller</strong>, I bring insights from the crossroads of technology, leadership, and human connection.
+      My talks focus on <strong>Curiosity, Chaos, and Clarity</strong> — helping professionals embrace uncertainty as a tool for growth.
+    </p>
+    <p>
+      I’ve spoken at global conferences on topics like <strong>Human-Centered AI</strong>, leadership through empathy, and bridging
+      the gap between academia and industry. My mission is to inspire others to view storytelling not as performance, but as a
+      practice of connection, curiosity, and impact.
+    </p>
+  </div>
+</section>
+
+
+  <!-- ================== CTA ================== -->
+  <section class="cta-section">
+    <h2>Invite Mrudu to Speak</h2>
+    <p>
+      Whether it’s a keynote, fireside chat, or workshop, Mrudu blends storytelling and strategy to empower your audience with actionable insights and lasting inspiration.
+    </p>
+<a href="connect.html" style="text-decoration: none;">
+  <button class="btn-primary">Let's Talk</button>
+</a>
+
+  </section>
+
+  <!-- ================== FOOTER ================== -->
+  <footer class="footer">
+    <p>&copy; 2025 Mrudu Lahari. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
